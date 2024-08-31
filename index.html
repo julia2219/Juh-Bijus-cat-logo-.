@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Produtos</h1>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Pesquisar produtos..." onkeyup="searchProducts()">
+            <i class="fas fa-search" id="search-icon"></i>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="filterCategory('all')">Todos</a></li>
+            <li><a href="#" onclick="filterCategory('Anéis')">Anéis</a></li>
+            <li><a href="#" onclick="filterCategory('Pulseiras')">Pulseiras</a></li>
+            <li><a href="#" onclick="filterCategory('Colares')">Colares</a></li>
+            <li><a href="#" onclick="filterCategory('Unhas postiças')">Unhas postiças</a></li>
+        </ul>
+    </nav>
+
+    <div class="product-catalog">
+        <!-- Produtos -->
+        <div class="product" data-category="Colares" onclick="openModal(this)">
+            <img src="rosacoracao.jpeg" alt="Colar com pingente coração">
+            <h2>Colar com pingente coração</h2>
+            <p>Um lindo colar prata com um pingente de coração,(Aço inoxidável).</p>
+            <span>R$ 20,00</span>
+        </div>
+        <div class="product" data-category="Colares" onclick="openModal(this)">
+            <img src="duplo.jpeg" alt="Colar de coração duplo">
+            <h2>Colar de coração duplo</h2>
+            <p>Um elegante colar de coração vazado,(Aço inoxidável).</p>
+            <span>R$ 20,00</span>
+        </div>
+        <div class="product" data-category="Colares" onclick="openModal(this)">
+            <img src="one.jpeg" alt="Colar com ponto de luz One Piece,(Aço inoxidável)">
+            <h2>Colar com ponto de luz One Piece.</h2>
+            <p>(Aço inoxidável)</p>
+            <span>R$ 20,00</span>
+        </div>
+        <div class="product" data-category="Pulseiras" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Pulseira simples ajustável">
+            <h2>Pulseira simples ajustável</h2>
+            <p>(Aço inoxidável)</p>
+            <span>R$ 15,00</span>
+        </div>
+        <div class="product" data-category="Pulseiras" onclick="openModal(this)">
+            <img src="ondulada.jpeg" alt="Pulseira simples com ondulação">
+            <h2>Pulseira simples com ondulação</h2>
+            <p>Bijuteria.</p>
+            <span>R$ 12,00</span>
+        </div>
+        <div class="product" data-category="Pulseiras" onclick="openModal(this)">
+            <img src="minimalista.jpeg" alt="Pulseira prata minimalista">
+            <h2>Pulseira prata minimalista</h2>
+            <p>(Aço inoxidável).</p>
+            <span>R$ 25,00</span>
+        </div>
+        <div class="product" data-category="Pulseiras" onclick="openModal(this)">
+            <img src="coracao.jpeg" alt="Pulseira minimalista de coração">
+            <h2>Pulseira minimalista de coração</h2>
+            <p>(Aço inoxidável).</p>
+            <span>R$ 25,00</span>
+        </div>
+        <div class="product" data-category="Pulseiras" onclick="openModal(this)">
+            <img src="strass.jpeg" alt="Pulseira de coração com pedras">
+            <h2>Pulseira de coração com pedras</h2>
+            <p>(Bijuteria).</p>
+            <span>R$ 20,00</span>
+        </div>
+        <div class="product" data-category="Pulseiras" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Pulseira com corações entrelaçados">
+            <h2>Pulseira com corações entrelaçados</h2>
+            <p>(Bijuteria).</p>
+            <span>R$ 10,00</span>
+        </div>
+        <div class="product" data-category="Pulseiras" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Pulseira de bolinhas">
+            <h2>Pulseira de bolinhas</h2>
+            <p>(Bijuteria).</p>
+            <span>R$ 10,00</span>
+        </div>
+        <div class="product" data-category="Pulseiras" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Pulseira simples">
+            <h2>Pulseira simples</h2>
+            <p>(Bijuteria).</p>
+            <span>R$ 10,00</span>
+        </div>
+        <div class="product" data-category="Pulseiras" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Pulseira com bolinhas">
+            <h2>Pulseira com bolinhas</h2>
+            <p>(Bijuteria).</p>
+            <span>R$ 10,00</span>
+        </div>
+        <div class="product" data-category="Pulseiras" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Pulseira com bolinhas">
+            <h2>Pulseira com bolinhas</h2>
+            <p>(Bijuteria).</p>
+            <span>R$ 10,00</span>
+        </div>
+        <div class="product" data-category="joias" onclick="openModal(this)">
+            <img src="brincos1.jpeg" alt="Somente a unidade">
+            <h2>Somente a unidade</h2>
+            <p>...</p>
+            <span>R$ 10,00</span>
+        </div>
+        <div class="product" data-category="joias" onclick="openModal(this)">
+            <img src="brincos2.jpeg" alt="Somente a unidade">
+            <h2>Somente a unidade</h2>
+            <p>...</p>
+            <span>R$ 10,00</span>
+        </div>
+        <div class="product" data-category="joias" onclick="openModal(this)">
+            <img src="brincos3.jpeg" alt="Somente a unidade">
+            <h2>Somente a unidade</h2>
+            <p>.</p>
+            <span>R$ 10,00</span>
+        </div>
+        <div class="product" data-category="maquiagens" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Batom Vermelho">
+            <h2>Batom Vermelho</h2>
+            <p>Batom de longa duração.</p>
+            <span>R$ 50,00</span>
+        </div>
+        <div class="product" data-category="maquiagens" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Base Líquida">
+            <h2>Base Líquida</h2>
+            <p>Base líquida com cobertura perfeita.</p>
+            <span>R$ 80,00</span>
+        </div>
+        <div class="product" data-category="joias" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Brinco de Ouro">
+            <h2>Brinco de Ouro</h2>
+            <p>Brincos finos de ouro 18K.</p>
+            <span>R$ 450,00</span>
+        </div>
+        <div class="product" data-category="joias" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Anel de Ouro">
+            <h2>Anel de Ouro</h2>
+            <p>Um lindo anel de ouro 18K.</p>
+            <span>R$ 500,00</span>
+        </div>
+        <div class="product" data-category="joias" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Colar de Pérola">
+            <h2>Colar de Pérola</h2>
+            <p>Um elegante colar de pérolas naturais.</p>
+            <span>R$ 300,00</span>
+        </div>
+        <div class="product" data-category="maquiagens" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Batom Vermelho">
+            <h2>Batom Vermelho</h2>
+            <p>Batom de longa duração.</p>
+            <span>R$ 50,00</span>
+        </div>
+        <div class="product" data-category="maquiagens" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Base Líquida">
+            <h2>Base Líquida</h2>
+            <p>Base líquida com cobertura perfeita.</p>
+            <span>R$ 80,00</span>
+        </div>
+        <div class="product" data-category="joias" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Brinco de Ouro">
+            <h2>Brinco de Ouro</h2>
+            <p>Brincos finos de ouro 18K.</p>
+            <span>R$ 450,00</span>
+        </div>
+        <div class="product" data-category="joias" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Anel de Ouro">
+            <h2>Anel de Ouro</h2>
+            <p>Um lindo anel de ouro 18K.</p>
+            <span>R$ 500,00</span>
+        </div>
+        <div class="product" data-category="joias" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Colar de Pérola">
+            <h2>Colar de Pérola</h2>
+            <p>Um elegante colar de pérolas naturais.</p>
+            <span>R$ 300,00</span>
+        </div>
+        <div class="product" data-category="maquiagens" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Batom Vermelho">
+            <h2>Batom Vermelho</h2>
+            <p>Batom de longa duração.</p>
+            <span>R$ 50,00</span>
+        </div>
+        <div class="product" data-category="maquiagens" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Base Líquida">
+            <h2>Base Líquida</h2>
+            <p>Base líquida com cobertura perfeita.</p>
+            <span>R$ 80,00</span>
+        </div>
+        <div class="product" data-category="joias" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Anel de Ouro">
+            <h2>Anel de Ouro</h2>
+            <p>Um lindo anel de ouro 18K.</p>
+            <span>R$ 500,00</span>
+        </div>
+        <div class="product" data-category="joias" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Colar de Pérola">
+            <h2>Colar de Pérola</h2>
+            <p>Um elegante colar de pérolas naturais.</p>
+            <span>R$ 300,00</span>
+        </div>
+        <div class="product" data-category="maquiagens" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Batom Vermelho">
+            <h2>Batom Vermelho</h2>
+            <p>Batom de longa duração.</p>
+            <span>R$ 50,00</span>
+        </div>
+        <div class="product" data-category="maquiagens" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Base Líquida">
+            <h2>Base Líquida</h2>
+            <p>Base líquida com cobertura perfeita.</p>
+            <span>R$ 80,00</span>
+        </div>
+        <div class="product" data-category="joias" onclick="openModal(this)">
+            <img src="https://via.placeholder.com/150" alt="Brinco de Ouro">
+            <h2>Brinco de Ouro</h2>
+            <p>Brincos finos de ouro 18K.</p>
+            <span>R$ 450,00</span>
+        </div>
+        <div class="product" data-category="Unhas postiças" onclick="openModal(this)">
+            <img src="unha1.jpeg" alt="Unha postiça realista">
+            <h2>Unha postiça realista</h2>
+            <p>...</p>
+            <span>R$ 20,00</span>
+        </div>
+        <div class="product" data-category="Unhas postiças" onclick="openModal(this)">
+            <img src="unha2.jpeg" alt="Unha postiça realista">
+            <h2>Unha postiça realista</h2>
+            <p>...</p>
+            <span>R$ 20,00</span>
+        </div>
+        <div class="product" data-category="Unhas postiças" onclick="openModal(this)">
+            <img src="unha3.jpeg" alt="Unha postiça realista">
+            <h2>Unha postiça realista</h2>
+            <p>...</p>
+            <span>R$ 20,00</span>
+        </div>
+        <div class="product" data-category="Unhas postiças" onclick="openModal(this)">
+            <img src="unha4.jpeg" alt="Unha postiça realista">
+            <h2>Unha postiça realista</h2>
+            <p>...</p>
+            <span>R$ 20,00</span>
+        </div>
+        <div class="product" data-category="Unhas postiças" onclick="openModal(this)">
+            <img src="unha5.jpeg" alt="Unha postiça realista">
+            <h2>Unha postiça realista</h2>
+            <p>...</p>
+            <span>R$ 20,00</span>
+        </div>
+        <div class="product" data-category="Unhas postiças" onclick="openModal(this)">
+            <img src="unha6.jpeg" alt="Unha postiça realista">
+            <h2>Unha postiça realista</h2>
+            <p>..</p>
+            <span>R$ 20,00</span>
+        </div>
+    
+        <!-- Duplicar produtos para um total de 30 produtos -->
+        <!-- Exemplo de mais produtos duplicados -->
+        <div class="product" data-category="Unhas postiças" onclick="openModal(this)">
+            <img src="unha7.jpeg" alt="Unha postiça realista">
+            <h2>Unha postiça realista</h2>
+            <p>...</p>
+            <span>R$ 20,00</span>
+        </div>
+        <!-- ... adicione mais produtos como acima ... -->
+    </div>
+
+    <!-- Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <span id="modalPrice"></span>
+        </div>
+    </div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Footer Example</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <style>
+        /* Rodapé */
+        footer {
+          background-color: #f8f9fa;
+          color: #6c757d;
+          padding: 40px 0;
+        }
+    
+        /* Seção de redes sociais */
+        footer .d-flex {
+          margin-bottom: 30px;
+        }
+    
+        footer .d-flex .me-4 {
+          margin-right: 15px;
+          font-size: 1.5rem;
+        }
+    
+        footer .d-flex .text-reset {
+          color: #6c757d;
+          transition: color 0.3s;
+        }
+    
+        footer .d-flex .text-reset:hover {
+          color: #343a40;
+        }
+    
+        /* Seções de Links */
+        footer .container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+    
+        footer h6 {
+          color: #343a40;
+          font-size: 1.2rem;
+          margin-bottom: 20px;
+          font-weight: bold;
+        }
+    
+        footer p {
+          margin: 0;
+          font-size: 0.9rem;
+        }
+    
+        footer .text-reset {
+          color: #6c757d;
+          text-decoration: none;
+          transition: color 0.3s;
+        }
+    
+        footer .text-reset:hover {
+          color: #343a40;
+        }
+    
+        /* Copyright */
+        footer .text-center {
+          background-color: #e9ecef;
+          padding: 10px;
+          color: #6c757d;
+        }
+      </style>
+    </head>
+    <body>
+</body>
+</html>
+    <script src="script.js"></script>
+</body>
+</html>
